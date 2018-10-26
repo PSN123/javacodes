@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+<head>
+<title>Google</title>
+	<meta name="google-signin-client_id" content="1012660124013-aj3q08a4ubq32qo7msdjnslejmgp4gmh.apps.googleusercontent.com">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+<style type="text/css">
+    .g-signin2{
+      /*  margin-left: 400px;*/ 
+        margin-top: 300px;
+    }
+    .data{
+        display: none;
+    }
+  
+
+
+
+*{
+	margin:0;
+	padding: 0;
+font-family: 'Cinzel', serif;
+}	
+.bgimg{
+	width: 100%;
+	height:100vh;
+background-image: linear-gradient(27.5deg, #004E95 50%, #013A6B 50%);
+}
+.center{
+	width:350px;
+	height: 550px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	background-color: red;
+	transform:translate(-50%,-50%);
+background-image: linear-gradient(27.5deg,  #013A6B 50%,#004E95 50%);
+
+}
+#profilepic{
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	position: relative;
+	top: -60px;
+
+} 
+h2{
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+font-size: 24px;
+word-spacing: 10px;
+margin-top: -50px;
+margin-bottom: 50px;
+text-shadow: -2px,2px,1px #013A6B;
+}
+.inputbox{
+	width: calc(100% - 40px);
+height: 30px;
+	display: block;
+	margin: auto; 
+padding: 0 10px;
+box-sizing: border-box;
+} 
+
+::placeholder{
+	letter-spacing: 2px;
+color:black;
+} 
+button{
+width: calc(100% - 40px);
+height: 30px;
+	display: block;
+	margin: auto; 
+color:white;
+background-color: #0A84C6;
+border:none;
+cursor: pointer;
+}
+h4{
+width: calc(100% - 40px);
+height: 30px;
+line-height: 30px;
+	display: block;
+	margin: auto; 
+color:white;
+background-color: dodgerblue;
+border:none;
+text-align: right;
+padding-right: 10px;
+box-sizing: border-box;
+
+}
+h1{
+margin-top: 10px;
+color: white;
+}
+    
+    
+    
+</style>
+<script>
+    function onSignIn(googleUser)
+    {
+        var profile=googleUser.getBasicProfile();
+        $(".g-signin2").css("display","none");
+        $(".data").css("display","block");
+        $("#pic").attr('src',profile.getImageUrl());
+        $("#email").text(profile.getEmail());
+    }
+   function signOut(){
+       var auth2=gapi.auth2.getAuthInstance();
+       auth2.signOut().then(function(){
+           alert("you have been successfully signed out");
+       $(".g-signin2").css("display","block");
+          $(".data").css("display","none");
+     
+        });
+   } 
+    
+</script>
+</head>
+<body>
+    <div  class="bgimg">
+	<div class="center">
+		<center><img src="https://cdn1.iconfinder.com/data/icons/flat-business-icons/128/user-128.png" id="profilepic"></center>
+<h2>User Login</h2>
+<form action="newhtml" methos="post">
+	<div>
+		<input type="text" name="" class="inputbox" placeholder="Username">
+	</div><br>
+	<div>
+		<input type="password" name="" class="inputbox" placeholder="password">
+
+	</div><br>
+	<div>
+		<button type="submit">Login</button>
+	</div>
+        <div>
+                    <button type="button" class="g-signin2" data-onsuccess="onSignIn">hello</button>
+
+        </div>
+</form><br>
+<div>
+	<h4>Forget Password?</h4>
+        <!--<center><h1>----------Or----------</h1></center>-->
+        <button ></button>    
+<!--<center><button class="g-signin2" data-onsuccess="onSignIn"></button></center>-->
+
+
+</div>
+<div>
+
+</div>
+
+</div>
+
+</div>
+    </body>
+</html>

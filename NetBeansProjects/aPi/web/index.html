@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <script>
+            function callApi(){
+         $.getJSON("https://api.themoviedb.org/3/search/movie?api_key=4447119f9aac77fea412ef72bdc6f00e&language=en-US&include_adult=false&page=1&id&query=Black Panther",
+function(results)
+         {
+             
+console.log(results);            
+//$("#actor").text(result.Actors);
+//$("#Director").text(result.Director);
+$("#my_image").attr("src",results.poster_path);
+//$("#plot").text(result.Plot);
+$("#overview").text(results.overview);
+
+console.log(value);
+     var x = document.createElement("IMG");
+    x.setAttribute("src",value);
+    x.setAttribute("width", "304");
+    x.setAttribute("height", "228");
+    x.setAttribute("alt", "The Pulpit Rock");
+    document.body.appendChild(x);
+    });
+      }
+    callApi();
+    </script>
+    
+   <h1 id="Tittle"></h1>
+   <h1 id="my_image">img</h1>
+<h1 id="overview">Story</h1>
+</body>
+</html>

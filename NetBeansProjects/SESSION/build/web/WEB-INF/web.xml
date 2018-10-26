@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>MYSESS</servlet-name>
+        <servlet-class>MYSESS</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>mysess1</servlet-name>
+        <servlet-class>mysess1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>mysess2</servlet-name>
+        <servlet-class>mysess2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MYSESS</servlet-name>
+        <url-pattern>/MYSESS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>mysess1</servlet-name>
+        <url-pattern>/mysess1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>mysess2</servlet-name>
+        <url-pattern>/mysess2</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

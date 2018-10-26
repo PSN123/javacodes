@@ -1,0 +1,62 @@
+#myNavbar{
+font:400 15px lato,sans-serif;
+line-height:1.8;
+color:#1f1784;
+}
+h2{
+font-size:24px;
+text-transform:uppercase;
+color:#1f1784;
+font-weight:600;
+margin-bottom:30px;
+}
+h4{
+font-size:19px;
+line-height:1.375em;
+color:#1f1784;
+font-weight:600;
+margin-bottom:30px;
+}
+.jumbotron{
+background-color:#1f1784;
+color:#fff;
+padding:100px 25px;
+font-family:Montserrat,sans-serif;
+}
+.navbar{
+margin-bottom:0;
+background-color:#1f1784;
+z-index:9999;
+border:0;
+font-size:12px !important;
+line-height:1.42857143 !important;
+letter-spacing:4px;
+border-radius:0;
+font-family:Montserrat,sans-serif;
+}
+.navbar li a,.navbar.navbar-brand{
+color:#fff !important;
+}
+.navabar-nav li a:hover, .navabar-nav li.active a{
+color:#f4511e !important;
+background-color:#fff !important;
+}
+.navbar-default .navbar-toggle{
+border-color:transparent;
+color:#fff !important;}
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  
